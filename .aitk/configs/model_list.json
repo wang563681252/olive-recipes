@@ -350,7 +350,7 @@
             "architecture": "Transformer",
             "status": "Ready",
             "relativePath": "nateraw-vit-age-classifier/aitk",
-            "version": 2
+            "version": 1
         },
         {
             "displayName": "Qwen/Qwen2.5-0.5B",
