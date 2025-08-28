@@ -83,10 +83,10 @@
             "version": 1
         },
         {
-            "displayName": "google/vit-base-patch16-224",
+            "displayName": "WinKawaks/vit-tiny-patch16-224",
             "icon": "gemini",
-            "modelLink": "https://huggingface.co/google/vit-base-patch16-224",
-            "id": "huggingface/google/vit-base-patch16-224",
+            "modelLink": "https://huggingface.co/WinKawaks/vit-tiny-patch16-224",
+            "id": "huggingface/WinKawaks/vit-tiny-patch16-224",
             "runtimes": [
                 "QNN",
                 "AMDNPU",
@@ -99,6 +99,25 @@
             "architecture": "Transformer",
             "status": "Ready",
             "relativePath": "google-vit-base-patch16-224/aitk",
+            "version": 1
+        },
+        {
+            "displayName": "WinKawaks/vit-tiny-patch16-224",
+            "icon": "gemini",
+            "modelLink": "https://huggingface.co/WinKawaks/vit-tiny-patch16-224",
+            "id": "huggingface/WinKawaks/vit-tiny-patch16-224",
+            "runtimes": [
+                "QNN",
+                "AMDNPU",
+                "NvidiaTRTRTX",
+                "DML",
+                "IntelCPU",
+                "IntelGPU",
+                "IntelNPU"
+            ],
+            "architecture": "Transformer",
+            "status": "Ready",
+            "relativePath": "WinKawaks-vit-tiny-patch16-224/aitk",
             "version": 1
         },
         {
