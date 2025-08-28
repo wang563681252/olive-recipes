@@ -63,7 +63,7 @@ def dataset_pre_process(output_data, **kwargs):
         if i >= size:
             break
         image = Image.open(io.BytesIO(sample["img_bytes"])).convert("RGB")
-        label = sample["gender"]
+        label = sample["age"]
 
         images.append(preprocess(image))
         labels.append(label)
