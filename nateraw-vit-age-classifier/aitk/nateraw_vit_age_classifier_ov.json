@@ -1,7 +1,7 @@
 {
     "input_model": {
         "type": "HfModel",
-        "model_path": "rizvandwiki/gender-classification",
+        "model_path": "nateraw/vit-age-classifier",
         "task": "image-classification"
     },
     "systems": {
@@ -140,5 +140,5 @@
     "evaluator": "common_evaluator",
     "cache_dir": "cache",
     "evaluate_input_model": false,
-    "output_dir": "model/vit_base_patch16_224_ov_static"
+    "output_dir": "history/Convert to Intel NPU_20250710_044835"
 }
