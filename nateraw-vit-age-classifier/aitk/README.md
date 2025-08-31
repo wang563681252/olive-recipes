@@ -18,6 +18,6 @@ It performs the optimization pipeline:
 |----------|--------------|------------------|
 | **Qualcomm NPU**<br/>Snapdragon X 12-core<br/>16.0 GB RAM | 100.0 | 0.25 |
 | **AMD NPU**<br/>Ryzen AI 9 H 365<br/>32.0 GB RAM | 100.0 | - |
-| **Intel NPU**<br/>Core Ultra 5 228V<br/>32.0 GB RAM | 100.0 | - |
+| **Intel NPU**<br/>Core Ultra 5 228V<br/>32.0 GB RAM | 62.94 | 10.71 |
 | **DML**<br/>AMD Ryzen 9 7845HX with Radeon Graphics <br/>32.0 GB RAM  | 63.83 | 4.80 |
 | **NVIDIA**<br/>AMD Ryzen 9 7845HX with Radeon Graphics <br/>NVIDIA GeForce RTX 4060<br/>32.0 GB RAM | 63.83 | 3.02 |

@@ -25,7 +25,7 @@
             "load_dataset_config": {
                 "data_name": "nateraw/fairface",
                 "split": "train",
-                "streaming": false,
+                "streaming": true,
                 "trust_remote_code": true
             },
             "pre_process_data_config": {
@@ -44,7 +44,7 @@
             "load_dataset_config": {
                 "data_name": "nateraw/fairface",
                 "split": "validation",
-                "streaming": false,
+                "streaming": true,
                 "trust_remote_code": true
             },
             "pre_process_data_config": {
