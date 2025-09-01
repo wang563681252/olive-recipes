@@ -16,18 +16,18 @@
                 ]
             ],
             "output_names": [
-                "output"
+                "logits"
             ]
         }
     },
     "systems": {
-        "qnn_system": {
+        "local_system": {
             "type": "LocalSystem",
             "accelerators": [
                 {
-                    "device": "npu",
+                    "device": "gpu",
                     "execution_providers": [
-                        "VitisAIExecutionProvider"
+                        "NvTensorRTRTXExecutionProvider"
                     ]
                 }
             ]
@@ -35,7 +35,7 @@
     },
     "data_configs": [
         {
-            "name": "quantization_data_config",
+            "name": "quantize_data_config",
             "type": "HuggingfaceContainer",
             "user_script": "WinKawaks-vit-tiny-patch16-224.py",
             "load_dataset_config": {
@@ -46,8 +46,8 @@
             },
             "pre_process_data_config": {
                 "type": "dataset_pre_process",
-                "size": 256,
-                "cache_key": "fairface224_quantization"
+                "size": 224,
+                "cache_key": "imagedata_quantization"
             },
             "post_process_data_config": {
                 "type": "dataset_post_process"
@@ -65,8 +65,8 @@
             },
             "pre_process_data_config": {
                 "type": "dataset_pre_process",
-                "size": 256,
-                "cache_key": "fairface224_validation"
+                "size": 224,
+                "cache_key": "imagedata_evaluation"
             },
             "post_process_data_config": {
                 "type": "dataset_post_process"
@@ -86,7 +86,7 @@
                             "priority": 1,
                             "metric_config": {
                                 "task": "multiclass",
-                                "num_classes": 1000
+                                "num_classes": 1001
                             }
                         }
                     ]
@@ -107,47 +107,26 @@
     },
     "passes": {
         "conversion": {
-            "device": "cpu",
             "type": "OnnxConversion",
             "target_opset": 17,
             "save_as_external_data": true,
             "all_tensors_to_one_file": true,
             "use_dynamo_exporter": false
         },
-        "transformer_optimizer": {
-            "type": "orttransformersoptimization",
-            "model_type": "vit",
-            "opt_level": 1,
-            "optimization_options": {
-                "enable_gelu": true,
-                "enable_bias_gelu": false,
-                "enable_layer_norm": true,
-                "enable_skip_layer_norm": false,
-                "enable_bias_skip_layer_norm": false,
-                "enable_attention": false
-            }
-        },
-        "OnnxQuantization": {
-            "type": "OnnxQuantization",
-            "data_config": "quantization_data_config",
-            "activation_type": "uint16",
-            "precision": "uint8",
-            "calibrate_method": "MinMax",
-            "quant_preprocess": true,
+        "onnx_float_to_float16": {
+            "type": "OnnxFloatToFloat16",
             "save_as_external_data": true
         },
-        "addmetadata": {
-            "type": "VitisAIAddMetaData",
-            "config_meta_data_keys": [ "architectures", "model_type" ],
-            "activation_type": "uint16",
-            "weight_type": "uint8",
-            "quant_type": "OnnxStaticQuantization"
+        "session_params_tuning": {
+            "type": "OrtSessionParamsTuning",
+            "io_bind": false,
+            "data_config": "quantize_data_config"
         }
     },
-    "host": "qnn_system",
-    "target": "qnn_system",
+    "host": "local_system",
+    "target": "local_system",
     "evaluator": "common_evaluator",
-    "output_dir": "model/vit",
-    "evaluate_input_model": false,
-    "cache_dir": "cache"
+    "output_dir": "model/vit-base-patch16-224",
+    "cache_dir": "cache",
+    "evaluate_input_model": false
 }
