@@ -22,6 +22,6 @@ recipes:
       ep: DmlExecutionProvider
 aitk:
     modelInfo:
-        id: "huggingface/WinKawaks_vit_tiny_patch16_224"
+        id: "huggingface/WinKawaks/vit-tiny-patch16-224"
         version: 2
-        p0: false
+        groupId: "huggingface/WinKawaks/vit-tiny-patch16-224"

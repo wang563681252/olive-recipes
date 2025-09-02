@@ -87,10 +87,10 @@
             "p0": true
         },
         {
-            "displayName": "WinKawaks/vit-tiny-patch16-224",
+            "displayName": "google/vit-base-patch16-224",
             "icon": "gemini",
-            "modelLink": "https://huggingface.co/WinKawaks/vit-tiny-patch16-224",
-            "id": "huggingface/WinKawaks/vit-tiny-patch16-224",
+            "modelLink": "https://huggingface.co/google/vit-base-patch16-224",
+            "id": "huggingface/google/vit-base-patch16-224",
             "runtimes": [
                 "QNN",
                 "AMDNPU",
@@ -105,25 +105,6 @@
             "relativePath": "google-vit-base-patch16-224/aitk",
             "version": 2,
             "p0": true
-        },
-        {
-            "displayName": "WinKawaks/vit-tiny-patch16-224",
-            "icon": "gemini",
-            "modelLink": "https://huggingface.co/WinKawaks/vit-tiny-patch16-224",
-            "id": "huggingface/WinKawaks/vit-tiny-patch16-224",
-            "runtimes": [
-                "QNN",
-                "AMDNPU",
-                "NvidiaTRTRTX",
-                "DML",
-                "IntelCPU",
-                "IntelGPU",
-                "IntelNPU"
-            ],
-            "architecture": "Transformer",
-            "status": "Ready",
-            "relativePath": "WinKawaks-vit-tiny-patch16-224/aitk",
-            "version": 1
         },
         {
             "displayName": "Intel/bert-base-uncased-mrpc",
@@ -560,6 +541,26 @@
             "architecture": "Transformer",
             "status": "Ready",
             "relativePath": "Qwen-Qwen2.5-Coder-14B-Instruct/aitk",
+            "version": 2
+        },
+        {
+            "displayName": "WinKawaks/vit-tiny-patch16-224",
+            "icon": "WinKawaks",
+            "modelLink": "https://huggingface.co/WinKawaks/vit-tiny-patch16-224",
+            "id": "huggingface/WinKawaks/vit-tiny-patch16-224",
+            "groupId": "huggingface/WinKawaks/vit-tiny-patch16-224",
+            "runtimes": [
+                "QNN",
+                "AMDNPU",
+                "NvidiaTRTRTX",
+                "IntelCPU",
+                "IntelGPU",
+                "IntelNPU",
+                "DML"
+            ],
+            "architecture": "Transformer",
+            "status": "Ready",
+            "relativePath": "WinKawaks-vit-tiny-patch16-224/aitk",
             "version": 2
         }
     ],
