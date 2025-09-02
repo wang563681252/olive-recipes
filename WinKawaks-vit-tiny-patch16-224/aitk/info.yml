@@ -23,4 +23,5 @@ recipes:
 aitk:
     modelInfo:
         id: "huggingface/WinKawaks_vit_tiny_patch16_224"
-        version: 1
+        version: 2
+        p0: false
