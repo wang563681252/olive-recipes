@@ -121,7 +121,7 @@ def generator_amd(id: str, recipe, folder: Path, modelList: ModelList):
     if not auto or not isLLM:
         return
     amd_runtime_values: list[str] = recipe.get("devices", [recipe.get("device")])
-    name = f"Convert to AMD {"/".join([runtime.upper() for runtime in amd_runtime_values])}"
+    name = f"Convert to AMD {'/'.join([runtime.upper() for runtime in amd_runtime_values])}"
 
     file = recipe.get("file")
     configFile = folder / file
