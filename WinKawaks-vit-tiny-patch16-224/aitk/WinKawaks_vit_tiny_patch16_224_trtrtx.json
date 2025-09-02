@@ -86,7 +86,7 @@
                             "priority": 1,
                             "metric_config": {
                                 "task": "multiclass",
-                                "num_classes": 1001
+                                "num_classes": 1000
                             }
                         }
                     ]
