@@ -21,6 +21,17 @@
         }
     },
     "systems": {
+        "host_system": {
+            "type": "LocalSystem",
+            "accelerators": [
+                {
+                    "device": "cpu",
+                    "execution_providers": [
+                        "CPUExecutionProvider"
+                    ]
+                }
+            ]
+        },
         "local_system": {
             "type": "LocalSystem",
             "accelerators": [
@@ -123,7 +134,7 @@
             "data_config": "quantize_data_config"
         }
     },
-    "host": "local_system",
+    "host": "host_system",
     "target": "local_system",
     "evaluator": "common_evaluator",
     "output_dir": "model/vit-base-patch16-224",

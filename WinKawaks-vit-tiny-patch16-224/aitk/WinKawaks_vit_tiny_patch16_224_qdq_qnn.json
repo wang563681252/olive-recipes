@@ -21,6 +21,17 @@
         }
     },
     "systems": {
+        "host_system": {
+            "type": "LocalSystem",
+            "accelerators": [
+                {
+                    "device": "cpu",
+                    "execution_providers": [
+                        "CPUExecutionProvider"
+                    ]
+                }
+            ]
+        },
         "qnn_system": {
             "type": "LocalSystem",
             "accelerators": [
@@ -141,7 +152,7 @@
             "save_as_external_data": true
         }
     },
-    "host": "qnn_system",
+    "host": "host_system",
     "target": "qnn_system",
     "evaluator": "common_evaluator",
     "output_dir": "history/Convert to Qualcomm NPU_20250710_061810",

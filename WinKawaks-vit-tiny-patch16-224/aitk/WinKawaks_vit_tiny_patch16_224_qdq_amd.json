@@ -21,7 +21,18 @@
         }
     },
     "systems": {
-        "qnn_system": {
+        "host_system": {
+            "type": "LocalSystem",
+            "accelerators": [
+                {
+                    "device": "cpu",
+                    "execution_providers": [
+                        "CPUExecutionProvider"
+                    ]
+                }
+            ]
+        },
+        "amd_system": {
             "type": "LocalSystem",
             "accelerators": [
                 {
@@ -144,8 +155,8 @@
             "quant_type": "OnnxStaticQuantization"
         }
     },
-    "host": "qnn_system",
-    "target": "qnn_system",
+    "host": "host_system",
+    "target": "amd_system",
     "evaluator": "common_evaluator",
     "output_dir": "model/vit",
     "evaluate_input_model": false,

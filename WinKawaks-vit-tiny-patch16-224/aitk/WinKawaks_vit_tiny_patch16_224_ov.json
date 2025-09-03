@@ -5,6 +5,17 @@
         "task": "image-classification"
     },
     "systems": {
+        "host_system": {
+            "type": "LocalSystem",
+            "accelerators": [
+                {
+                    "device": "cpu",
+                    "execution_providers": [
+                        "CPUExecutionProvider"
+                    ]
+                }
+            ]
+        },
         "local_system": {
             "type": "LocalSystem",
             "accelerators": [
@@ -135,7 +146,7 @@
         }
     },
     "search_strategy": false,
-    "host": "local_system",
+    "host": "host_system",
     "target": "local_system",
     "evaluator": "common_evaluator",
     "cache_dir": "cache",
