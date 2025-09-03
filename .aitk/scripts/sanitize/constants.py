@@ -105,6 +105,7 @@ class OliveDeviceTypes(Enum):
 # Pass name is case insensitive, so we use lower case for all pass names
 # Should sort by value
 class OlivePassNames:
+    OnnxFloatToFloat16 = "onnxfloattofloat16"
     ModelBuilder = "modelbuilder"
     OnnxConversion = "onnxconversion"
     OnnxDynamicQuantization = "onnxdynamicquantization"
@@ -115,6 +116,8 @@ class OlivePassNames:
     OpenVINOOptimumConversion = "openvinooptimumconversion"
     OpenVINOQuantization = "openvinoquantization"
     OrtTransformersOptimization = "orttransformersoptimization"
+    QuarkQuantization = "quarkquantization"
+
 
 
 # Should sort by value
@@ -126,6 +129,7 @@ class OlivePropertyNames:
     DataConfig = "data_config"
     DataConfigs = "data_configs"
     DataName = "data_name"
+    Dataset = "dataset"
     Device = "device"
     Engine = "engine"
     EvaluateInputModel = "evaluate_input_model"
@@ -138,6 +142,7 @@ class OlivePropertyNames:
     MaxSamples = "max_samples"
     Metrics = "metrics"
     Name = "name"
+    NumCalibData = "num_calib_data"
     OutputDir = "output_dir"
     Passes = "passes"
     Precision = "precision"
