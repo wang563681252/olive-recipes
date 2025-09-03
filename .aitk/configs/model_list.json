@@ -561,7 +561,7 @@
             "architecture": "Transformer",
             "status": "Ready",
             "relativePath": "WinKawaks-vit-tiny-patch16-224/aitk",
-            "version": 2
+            "version": 1
         }
     ],
     "template_models": [

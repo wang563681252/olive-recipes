@@ -23,5 +23,5 @@ recipes:
 aitk:
     modelInfo:
         id: "huggingface/WinKawaks/vit-tiny-patch16-224"
-        version: 2
+        version: 1
         groupId: "huggingface/WinKawaks/vit-tiny-patch16-224"
